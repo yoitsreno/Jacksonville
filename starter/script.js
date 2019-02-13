@@ -204,3 +204,96 @@ switch (true) {
     default:
     console.log(firstName + ' is a man. ');
 }
+
+/******************************
+* Truthly and Falsy values and equality operators
+
+// Falsy values = undefined, null, 0, ' ', NaN
+// Truthly values = NOT falsy values
+
+
+var height;
+
+height = 23;
+
+if (height || height === 0) {
+    console.log('variable is define');
+} else {
+    console.log('variable has NOT been defined')
+}
+
+// Equality operators
+if (height == '23') {
+    console.log('the == operator does type corcien!');
+}
+
+/******************************
+* John & Mike Score
+
+/
+var scoreJohn = (110 + 120 + 103) / 3;
+var scoreMike = (116 + 94 + 123) / 3;
+console.log(scoreJohn, scoreMike);
+
+if (scoreJohn > scoreMike){
+    console.log('John\'s team wins with' + scoreJohn + 'points');
+} else if (scoreMike > scoreJohn) {
+    console.log('Mike\s team with' + scoreMike + 'points'); 
+}
+else {
+    console.log('There is a draw');
+}
+
+
+/******************************
+* Functions
+
+
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName){
+    var age = calculateAge(year)
+    var retirement = 65 - age;
+
+    if (retirement > 0) {
+    console.log(firstName + ' retires in ' + retirement + ' years. ');
+}   else {
+        console.log(firstName + ' is already retired. ')
+    }
+}
+yearsUntilRetirement (1990, 'John');
+yearsUntilRetirement (1948, 'Mike');
+yearsUntilRetirement (1969, 'Jane');
+
+
+/******************************
+* Functions Statements and Expressions
+*/
+
+// Function Decleration
+// Function whatDoYouDo(job, firstName){}
+
+// Function Expression
+var whatDoYouDo = function(job, firstName) {
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives a cab in lisbon';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+        return firstName + ' does something else ';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
